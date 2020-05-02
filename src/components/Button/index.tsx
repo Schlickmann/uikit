@@ -12,21 +12,21 @@ export interface Props {
 
 const ButtonWrapper: React.FC<Props> = ({
   children,
-  backgroundColor = '#7159c1',
+  backgroundColor = '#fe346e',
   color = '#fff',
   outlined = false,
   ...props
 }) => {
   return (
-    <button
-      // backgroundColor={backgroundColor}
-      // color={color}
+    <Container
+      backgroundColor={backgroundColor}
+      color={color}
       style={{ backgroundColor, color }}
-      // outlined={outlined}
+      outlined={outlined}
       {...props}
     >
       {children}
-    </button>
+    </Container>
   );
 };
 
