@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 8080"
+  },
   "devDependencies": {
+    "@storybook/addon-centered": "^5.3.18",
     "@storybook/addon-info": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "@types/react": "^16.9.34",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
     "ts-loader": "^7.0.2",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "babel-loader": "^8.1.0"
   }
 }

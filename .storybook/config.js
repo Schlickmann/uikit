@@ -1,18 +1,19 @@
-module.exports = {
-  webpackFinal: async config => {
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      use: [
-        {
-          loader: require.resolve('ts-loader'),
-        },
-        // Optional
-        {
-          loader: require.resolve('react-docgen-typescript-loader'),
-        },
-      ],
-    });
-    config.resolve.extensions.push('.ts', '.tsx');
-    return config;
+import { configure, addParameters, addDecorator } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import centered from '@storybook/addon-centered/react';
+
+import theme from './theme';
+
+import './reset.css';
+
+addParameters({
+  options: {
+    theme,
   },
-};
+});
+
+addDecorator(withInfo);
+addDecorator(centered);
+
+// Import all stories
+configure(require.context('../stories', true, /\.stories\.tsx$/), module);
