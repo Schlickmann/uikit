@@ -1,0 +1,14 @@
+{
+  "name": "uikit",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-info": "^5.3.18",
+    "@types/react": "^16.9.34",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "ts-loader": "^7.0.2",
+    "typescript": "^3.8.3"
+  }
+}
